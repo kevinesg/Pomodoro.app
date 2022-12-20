@@ -113,6 +113,7 @@ fun MainActivityContent(
                 viewModel = viewModel,
                 mainActivity = mainActivity
             )
+            //Toast.makeText(LocalContext.current, "Press back again to exit", Toast.LENGTH_LONG).show()
         }
     }
 }

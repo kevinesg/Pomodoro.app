@@ -36,7 +36,6 @@ fun HomeScreen(
 
     BackHandler(enabled = true) {
         viewModel.showConfirmExitApp.value = true
-
     }
 }
 

@@ -45,7 +45,9 @@ fun WorkButton(
         onClick = {
             viewModel.isWorking.value = true
             viewModel.isResting.value = false
-            navController.navigate(Screens.WORK.name)
+            navController.navigate(Screens.WORK.name) {
+                popUpTo(0)
+            }
         }
     ) {
         Text(text = "Work", fontSize = 25.sp, color = Color(0xFFFFFFFF))
@@ -67,7 +69,9 @@ fun RestButton(
         onClick = {
             viewModel.isResting.value = true
             viewModel.isWorking.value = false
-            navController.navigate(Screens.REST.name)
+            navController.navigate(Screens.REST.name) {
+                popUpTo(0)
+            }
         }
     ) {
         Text(text = "Rest", fontSize = 25.sp, color = Color(0xFFFFFFFF))
@@ -88,7 +92,9 @@ fun BottomButtons(
                 .size(50.dp)
                 .clickable {
                     viewModel.pauseTimers()
-                    navController.navigate(Screens.PAUSE.name)
+                    navController.navigate(Screens.PAUSE.name) {
+                        popUpTo(0)
+                    }
                 },
             colorResource(id = R.color.black)
         )
@@ -176,7 +182,9 @@ fun ConfirmReset(
                         onClick = {
                             viewModel.resetTimers()
                             viewModel.showAlert.value = false
-                            navController.navigate(Screens.HOME.name)
+                            navController.navigate(Screens.HOME.name) {
+                                popUpTo(0)
+                            }
                         }
                     ) {
                         Text("Yes", color = Color(0xFFFFFFFF), fontSize = 20.sp)
@@ -486,8 +494,8 @@ fun ConfirmExitApp(
         }
 
         BackHandler {
-            if (viewModel.showAlert.value) {
-                viewModel.showAlert.value = false
+            if (viewModel.showConfirmExitApp.value) {
+                viewModel.showConfirmExitApp.value = false
             }
         }
     }
