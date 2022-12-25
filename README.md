@@ -5,13 +5,13 @@ Current version is heavily inspired and basically just an Android app version of
 ## Roadmap
 Aside from implementing Freemodoro's [roadmap](https://github.com/shwwwna/freemodoro), I will add these features and also fix current bugs:
 - send notifications when minimized
-- scale dimensions to screen size instead of fixed dp/sp
 - dark mode
-- improve overall UI/UX
+- improve overall UI/UX; add animation on button click
 #
 - [FIXED] states getting reset during configuration changes (e.g. screen rotation)
 - [FIXED] clicking the back button results into unwanted interactions (e.g. incorrect timers)
-- fix randomly "flickering" timer
+- [FIXED] randomly "flickering" timer
+- fix app becoming inactive while minimized (timer pauses after a while)
 
 #
 I'm new to Android Development and focuses on Jetpack Compose. If you have questions or suggestions, feel free to contact me here or at kevinlloydesguerra@gmail.com. Thanks!
